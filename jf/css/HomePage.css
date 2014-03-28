@@ -51,3 +51,9 @@
 		margin-bottom: 0px;	
 	}
 }
+.page-header{
+    opacity: 0.3;   
+}
+.page-header:hover{
+    opacity: 1;
+}
