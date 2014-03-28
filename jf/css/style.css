@@ -1,0 +1,24 @@
+@charset "utf-8";
+@import url("HomePage.css");
+#home-section{
+	width: 100%;
+	max-height: 100%;
+	min-height: 25%;
+	height: 750px;
+	background: url(../img/bg-goodssolutions.jpg);
+	background-position: 50% 0%;
+	background-size: cover;
+	position: relative;
+}
+.bg-pane{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	//background-image: url("http://www.jrmeza.com/images/backgrounds/bg-mask.png");
+	transition: background-color 1s;
+}
+.bg-pane:hover{
+	background-color: rgba(14,11,11,0.4);	 
+}
