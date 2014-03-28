@@ -52,6 +52,7 @@
 	}
 }
 .home-page-header{
+    transition: opacity 1s;
     opacity: 0.3;   
 }
 .home-page-header:hover{
