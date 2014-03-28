@@ -22,3 +22,6 @@
 .bg-pane:hover{
 	background-color: rgba(14,11,11,0.4);	 
 }
+.navbar-form{
+    margin-bottom: 0;
+}
