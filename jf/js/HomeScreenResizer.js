@@ -8,7 +8,7 @@
 			if( h > window.innerHeight){
 				h = window.innerHeight;
 			}
-            if( h < 600 ){
+            if( h < 300 ){
                     h = 300;
                 }
 			headerElement.style.height = h + "px";
