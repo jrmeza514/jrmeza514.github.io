@@ -9,7 +9,7 @@
 				h = window.innerHeight;
 			}
             if( h < 600 ){
-                    h = 600;
+                    h = 300;
                 }
 			headerElement.style.height = h + "px";
 			//headerElement.style.width = w + "px";
