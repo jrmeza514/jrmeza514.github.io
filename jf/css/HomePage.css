@@ -51,10 +51,10 @@
 		margin-bottom: 0px;	
 	}
 }
-.home-page-header{
+//.home-page-header{
     transition: opacity 1s;
     opacity: 0.3;   
 }
-.home-page-header:hover{
+//.home-page-header:hover{
     opacity: 1;
 }
