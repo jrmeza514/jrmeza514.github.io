@@ -1,9 +1,10 @@
-.MainSources{
+.MainSources .SecondarySources{
   width: 90%;
   background-color: #ecf0f1;
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
+  margin-top: 20px;
 }
 .Source:first-child{
   border-top: 2px dashed black;
@@ -21,6 +22,7 @@
 .Source .SourceDescription{
   font-size: 20px;
   font-family: Arial;
+  font-weight: bold;
 }
 .Source .SourceDescrition p{
   text-indent: 2em;
