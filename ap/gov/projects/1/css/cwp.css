@@ -3,13 +3,13 @@ body{
 }
 #puzzleContainer{
     width: 50%;   
-    margin-left: 2px;
-    display: inline-block;
 }
 
 #box{
   float: right;
   width: 45%;
+}
+.inline{
   margin-left: 2px;
     display: inline-block;
 }
