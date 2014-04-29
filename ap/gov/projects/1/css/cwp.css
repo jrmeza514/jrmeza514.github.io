@@ -23,7 +23,7 @@ body{
 and (min-width : 1500px) 
 and (max-width : 2080px)  { 
  *{
-   display: none; 
+   opacity: 0;
   }
 
 }
