@@ -20,8 +20,7 @@ body{
   vertical-align: top;
 }
 @media screen 
-and (min-width : 1500px) 
-and (max-width : 2080px)  { 
+and (max-width : 1000px)  { 
  *{
    opacity: 0;
   }
