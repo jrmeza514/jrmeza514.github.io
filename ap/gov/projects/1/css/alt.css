@@ -17,7 +17,7 @@
   border-bottom: 2px dashed black;
 }
 .Source:last-child{
-  border-bottom: 0px dashed black;
+  border-bottom: 0px dashed black; 
 }
 .Source .SourceTitle{
   font-weight: bold;
