@@ -13,11 +13,11 @@
   background-color: #c0392b;
   font-family: Arial;
 }
-.Source:last-child{
-  border-top: 0px dashed black;
-}
 .Source{
   border-bottom: 2px dashed black;
+}
+.Source:last-child{
+  border-top: 0px dashed black;
 }
 .Source .SourceTitle{
   font-weight: bold;
