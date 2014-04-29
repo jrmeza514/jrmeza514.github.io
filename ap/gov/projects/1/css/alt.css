@@ -11,6 +11,7 @@
   text-align: center;
   font-size: 3em;
   background-color: #c0392b;
+  font-family: Arial;
 }
 .Source:first-child{
   border-top: 2px dashed black;
