@@ -88,8 +88,8 @@
 }
 .solar-panel{
 	background-image: url("../img/solar-panel-hi.png");
-	height: 100px;
-	width: 200px;
+	height: 80px;
+	width: 160px;
 	background-size: cover; 
 	position: absolute;
 }
