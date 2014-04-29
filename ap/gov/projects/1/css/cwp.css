@@ -1,0 +1,21 @@
+body{
+  margin: 0;   
+}
+#puzzleContainer{
+    width: 50%;   
+}
+.inline{
+    margin-left: 2px;
+    display: inline-block;
+}
+#box{
+  float: right;
+  width: 45%;
+}
+.clearTop{
+  margin-top: 20px;   
+}
+#acrossContainer, #downContainer, .title{
+  width: 45%;   
+  vertical-align: top;
+}
