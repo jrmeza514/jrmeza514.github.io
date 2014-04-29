@@ -5,8 +5,11 @@
   margin-right: auto;
   padding: 10px;
 }
+.Source:first-child{
+  border-top: 2px dashed black;
+}
 .Source{
-  
+  border-bottom: 2px dashed black;
 }
 .Source .SourceTitle{
   font-weight: bold;
