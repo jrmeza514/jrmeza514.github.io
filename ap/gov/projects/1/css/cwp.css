@@ -20,8 +20,8 @@ body{
   width: 45%;   
   vertical-align: top;
 }
-@media screen 
-and (max-width : 1300px)  { 
+@media screen and (max-width : 1300px)  { 
  #puzzleContainer{
    width: 100%;
+  }
 }
