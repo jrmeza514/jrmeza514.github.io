@@ -3,14 +3,15 @@ body{
 }
 #puzzleContainer{
     width: 50%;   
-}
-.inline{
     margin-left: 2px;
     display: inline-block;
 }
+
 #box{
   float: right;
   width: 45%;
+  margin-left: 2px;
+    display: inline-block;
 }
 .clearTop{
   margin-top: 20px;   
@@ -21,8 +22,5 @@ body{
 }
 @media screen 
 and (max-width : 1300px)  { 
- *{
-   opacity: 0;
-  }
-
+ 
 }
