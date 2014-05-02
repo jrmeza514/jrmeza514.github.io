@@ -4,7 +4,7 @@
 #layer1{
 	background-image: url("../img/multiplane_landscape.png");
 	background-size: cover;
-	background-position: 50% 20%;
+	background-position: 0% 20%;
 }
 .layer{
 	position: absolute;
