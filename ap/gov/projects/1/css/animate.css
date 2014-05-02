@@ -9,7 +9,7 @@
 .layer{
 	position: absolute;
 	width: 100%;
-	height: 89%;
+	height: 89.5%;
 }
 .cloud{
 	background-image: url("../img/white-clouds-cloud-512.png");
@@ -200,4 +200,9 @@
 		text-shadow: 10px 10px 10px gold;
 	}
 }
+/*header.page-header{
+  position: absolute;  
+ z-index: 1000;
+}
+*/
 

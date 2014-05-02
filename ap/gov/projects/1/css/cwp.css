@@ -20,8 +20,33 @@ body{
   width: 45%;   
   vertical-align: top;
 }
+.cwTable caption{
+    background-color: #e74c3c;
+    font-weight: 900;
+    font-family: Arial;
+    font-size: 2em;
+    padding: 3px;
+    border: 7px solid #c0392b;
+    margin-top: 20px;
+}
 @media screen and (max-width : 1300px)  { 
  #puzzleContainer{
    width: 100%;
+     display: block;
   }
+  #box{
+    width: 90%;
+    margin-left: 15%;
+      float: none;
+  }
+     #downContainer{
+        margin-left: 30px;
+    }
+    #acrossContainer{
+        margin-left: -30px;
+    }
+ #puzzleContainer .cwTable{
+    margin-left: auto;
+    margin-right: auto;
+ }
 }
