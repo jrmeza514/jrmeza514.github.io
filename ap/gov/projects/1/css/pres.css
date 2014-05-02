@@ -1,1 +1,112 @@
- 
+ header{
+  opacity: 0;
+  transition: opacity 0.5s;
+     position: absolute;
+     z-index: 10;
+ }
+header:hover{
+ opacity: 1;   
+}
+.presentation{
+    height: 100%;
+    width: 100%;
+    background-color: black; 
+    position: absolute; 
+    overflow: hidden;
+    
+}
+.slide{
+    transition: top 1s;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow-y: scroll;
+}
+#slide1{
+    background-color: #3498db;
+}
+#slide2{
+    background-color: #ecf0f1;
+}
+#slide3{
+    background-color: #e74c3c;
+}
+#slide4{
+    background-color: #2c3e50;
+} 
+#slide5{
+    background-color: #f1c40f;
+} 
+.slide .slideFooter{
+   // width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.slide .slideFooter .next{
+    background-image: url("../pres/img/arrowD.png");
+    background-size: 100% 100%;
+    position: relative;
+    bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 100%;
+    cursor: pointer;
+    width: 100px;
+    height: 100%;
+    
+}
+.slide:last-child .slideFooter .next {
+    background-image: url("../pres/img/arrowU.png");
+}
+.slide .title{
+ font-size: 2em;
+    font-family: Arial;
+    font-weight: 900;
+    color: #2d2d2d;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.slide .content .point{
+    width: 90%;
+    font-family: Arial;
+    color: #2d2d2d;
+    font-weight: 900;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1.3em;
+    margin-top: 10px;
+}
+table{
+    width: 100%;
+    font-family: Arial;
+    font-weight: 900;
+    color: #2d2d2d;
+    font-size: 1.2em;
+}
+ td{
+    text-align: center;
+    border: 7px solid #2d2d2d;
+     border-radius: 5px;
+}
+.bi{
+    width: 50%;    
+}
+td td{
+    border: 0px;   
+}
+.tbl {
+ margin-top: 20%;  
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.thanks{
+    font-size: 8em;  
+    font-family: Arial;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 20%;
+}
