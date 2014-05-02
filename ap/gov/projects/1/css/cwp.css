@@ -21,6 +21,7 @@ body{
     text-align: center;
     border: 7px solid #2c3e50;
     border-top: 0px solid white;
+    margin-bottom: 20px;
 }
 .hints .header{
     border: 7px solid  #c0392b;
