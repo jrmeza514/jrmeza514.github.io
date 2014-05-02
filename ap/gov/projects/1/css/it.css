@@ -6,7 +6,10 @@
     background-repeat: no-repeat;
     border-radius: 100%;
     background-size: 65% 65%;
-    background-image: url("http://jrmeza514.github.io/ap/gov/projects/1/it/img/it.jpg")
+    background-image: url("http://jrmeza514.github.io/ap/gov/projects/1/it/img/it.jpg");
+    border: 2px dashed black;
+    margin-left: auto;
+    margin-right: auto;
 }
 
  
