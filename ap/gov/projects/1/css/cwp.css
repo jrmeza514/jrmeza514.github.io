@@ -30,7 +30,9 @@ body{
     margin-left: -2.3%;
     margin-bottom: 20px;
     color: #2d2d2d; 
-    font-size: 1.5em;
+    font-size: 1.2em;
+    font-weight: bolder;
+    font-family: Arial;
 }
 #acrossContainer, #downContainer, .title{
   width: 45%;   
