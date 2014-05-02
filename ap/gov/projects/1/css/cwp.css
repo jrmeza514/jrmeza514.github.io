@@ -80,3 +80,9 @@ body{
     margin-right: auto;
  }
 }
+@media print{
+
+    .cwTable{
+        display: block; 
+    }
+}
