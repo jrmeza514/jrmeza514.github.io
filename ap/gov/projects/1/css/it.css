@@ -1,15 +1,12 @@
 .ironTriangleImage{
-  height: 250px;
-  width: 250px;
-  background-color: white;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 100%;
-}
-.ironTriangleImage img{
-  height: 70%;
-  width: 60%;
-  margin: 10%;
+    height: 250px;
+    width: 250px;
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    background-size: 80% 80%;
+    background-image: url("http://jrmeza514.github.io/ap/gov/projects/1/it/img/it.jpg")
 }
 
  
