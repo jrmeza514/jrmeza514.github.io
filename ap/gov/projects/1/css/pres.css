@@ -78,6 +78,7 @@ header:hover{
     margin-left: auto;
     font-size: 1.3em;
     margin-top: 10px;
+     max-width: 1000px;
 }
 table{
     width: 100%;
