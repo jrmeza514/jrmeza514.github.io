@@ -14,8 +14,8 @@
     margin-bottom: 20px;
 }
 .itComponent{
-  background-color: #ecf0f1; 
-    display: inline-block;
+    background-color: #ecf0f1; 
+    display:inline-block;
     width: 42%;
     margin: 40px 2% 0 4% ; 
     border: 7px  solid #2c3e50;
@@ -24,6 +24,9 @@
     color: #2d2d2d;
     font-weight: 900;
     font-size: 1.2em;
+    vertical-align: top;
+    float: left;
+    
 }
 .itComponent > .title{
     background-color: #e74c3c;
