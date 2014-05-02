@@ -16,6 +16,13 @@ body{
 .clearTop{
   margin-top: 20px;   
 }
+.hints{
+    background-color: #e74c3c;
+    text-align: center;
+}
+.hints .header{
+    border: 7px solid  #c0392b;
+}
 #acrossContainer, #downContainer, .title{
   width: 45%;   
   vertical-align: top;
@@ -36,14 +43,14 @@ body{
   }
   #box{
     width: 90%;
-    margin-left: 15%;
+    margin-left: 5%;
       float: none;
   }
      #downContainer{
         margin-left: 30px;
     }
     #acrossContainer{
-        margin-left: -30px;
+        margin-left: 4%;
     }
  #puzzleContainer .cwTable{
     margin-left: auto;
