@@ -1,4 +1,4 @@
-window.onload = function(){
+(function(){
     var slides = document.getElementsByClassName("slide");
     var currentSlide = 0;
     var isMoving = false;
@@ -26,4 +26,4 @@ window.onload = function(){
         }
     }
      reset();
-}
+})();
