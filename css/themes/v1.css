@@ -1,0 +1,9 @@
+ body{
+   background-color: rgb(253, 255, 219);   
+ }
+.page-header{
+ background-color: rgba(52, 40, 40, 1);   
+}
+.header-nav li{
+    color:  rgb(253, 255, 219);
+}
