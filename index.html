@@ -6,6 +6,7 @@
 <html class="">
 <!--<![endif]-->
 <head> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Untitled Document</title>
@@ -20,8 +21,11 @@
 <script type="text/javascript" src="res/js/stroll.min.js"></script>
 <link rel="stylesheet" href="res/css/normalize.css">
 <link rel="stylesheet" href="res/css/stroll.css">
+<link href='http://fonts.googleapis.com/css?family=Ruthie' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="res/js/logo_animation.js"></script>
 
-<!-- 
+
+<!--  
 To learn more about the conditional comments around the html tags at the top of the file:
 paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
 
@@ -39,15 +43,30 @@ Do the following if you're using your customized build of modernizr (http://www.
 <body>
 <div class="page_wrapper">
  	<div class="hiddenheader hiddenmobile">
-    
+    	
     </div>
     <section class="home-section">
-    
+    	<div class="dark_bg_mask">
+        	 <div class="logo_animation">
+             	<div class="word">
+                	<span class="letter">J</span>
+                    <span class="letter">u</span>
+                    <span class="letter">a</span>
+                    <span class="letter">n</span>
+                </div>
+                <div class="word">
+                	<span class="letter">M</span>
+                    <span class="letter">e</span>
+                    <span class="letter">z</span>
+                    <span class="letter">a</span>
+                </div>               
+             </div>
+        </div>
     </section>
     <section class="about-section">
     
     </section>
-    <section class="donate-section">
+    <section id="donate" class="donate-section">
        		<div class='fundly-widget' style='width:275px;'><iframe src='https://d2wwhrh9otv6z9.cloudfront.net/campaign_card.html?activity=getting-stared' style='border:none;width:275px;height:510px'></iframe><p style='text-align:right;margin:0;line-height:14px'><a href='http://fundly.com?ft_src=widget_campaign_card' style='font:10px/18px helvetica;color:#888;text-decoration:none;'><img src='http://images.fundly.net/uploads/420caabe-becb-4088-8a22-f773d8295962.png?w=80' alt='Fundly' style='margin-left:5px;float:right' />powered by</a></p></div>
      	 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
