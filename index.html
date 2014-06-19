@@ -11,6 +11,16 @@
 <title>Untitled Document</title>
 <link href="boilerplate.css" rel="stylesheet" type="text/css">
 <link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="css/home-section.css" rel="stylesheet" type="text/css">
+<link href="css/donate.css" rel="stylesheet" type="text/css">
+<link href="css/about.css" rel="stylesheet" type="text/css">
+<link href="css/projects.css" rel="stylesheet" type="text/css">
+<link href="css/header.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="res/js/scroll.js"></script>
+<script type="text/javascript" src="res/js/stroll.min.js"></script>
+<link rel="stylesheet" href="res/css/normalize.css">
+<link rel="stylesheet" href="res/css/stroll.css">
+
 <!-- 
 To learn more about the conditional comments around the html tags at the top of the file:
 paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
@@ -27,7 +37,7 @@ Do the following if you're using your customized build of modernizr (http://www.
 <script src="respond.min.js"></script>
 </head>
 <body>
-<div class="gridContainer clearfix">
+<div class="page_wrapper">
  	<div class="hiddenheader hiddenmobile">
     
     </div>
@@ -43,7 +53,7 @@ Do the following if you're using your customized build of modernizr (http://www.
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
 ">
-<input type="image" src="http://2.bp.blogspot.com/-gfSOJioApEI/UgxVeYqiWtI/AAAAAAAAFKs/U57WpsYlz14/s1600/paypal+donation+button.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<input id="paypal-button" type="image" src="http://2.bp.blogspot.com/-gfSOJioApEI/UgxVeYqiWtI/AAAAAAAAFKs/U57WpsYlz14/s1600/paypal+donation+button.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
     </section>
