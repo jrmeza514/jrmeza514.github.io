@@ -20,6 +20,9 @@
     }
     function clear(){
         loader.style.opacity = "0";   
+        setTimeout(function(){
+            loader.style.display = "none";
+        },500);
     }
     
     function updateUI( percentage ){
