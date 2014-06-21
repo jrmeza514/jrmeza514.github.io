@@ -20,9 +20,8 @@ body, html{
     background-color: white;
     border-bottom: 1px solid #e9e9e9;
     font-family: Raleway, Arial, Arvo, Avenir;
-    height: 60px;
     color: #2d2d2d;
-    margin-bottom: 20px;
+   box-shadow:  0px 4px 15px rgba(0,0,0,0.07);
 /*
     position: absolute;
     top: 0%;
@@ -43,14 +42,21 @@ body, html{
 .hiddenheader .nav .nav-item{
     display: inline-block;
     padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 .hiddenheader .nav .nav-item:hover{
     background-color: #e9e9e9;
 }
 .hiddenheader .content{
     max-width: 1200px;
-    min-width: 600px;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
+}
+section{
+    padding: 30px 0;   
+}
+section:nth-child(odd){
+    background-color: rgb(246, 246, 246);
 }
