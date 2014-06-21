@@ -5,6 +5,10 @@ body, html{
 	width: 100%;
 	-webkit-font-smoothing: antialiased;
 }
+a:active, a, a:visited, a:hover{
+    background: inherit;
+    color: inherit;
+}
 .page_wrapper{
 	position:relative;
 	height: 100%;
