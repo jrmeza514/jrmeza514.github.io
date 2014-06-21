@@ -1,4 +1,8 @@
 (function(){
+    var stylesheet = document.createElement("link");
+    stylesheet.rel = "stylesheet";
+    stylesheet.href = "http://jrmeza514.github.io/res/website_preloader/preloader.css";
+    document.head.appendChild(stylesheet);
     var loader = document.createElement("div");
     loader.id = "-jrm-page-loader";
     var counter = document.createElement("div");
