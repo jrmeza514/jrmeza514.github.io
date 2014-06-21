@@ -13,7 +13,6 @@ body{ margin: 0;}
     background-color: red;
     position: absolute;
     top: 44%;
-    transition: width 0.2s;
 }
 
 #-jrm-page-loader #-jrm-page-loader-progress-bar-counter{

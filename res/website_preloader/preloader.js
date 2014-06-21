@@ -10,25 +10,21 @@
     loader.appendChild(progressBarHolder);
     document.body.appendChild( loader );
     
+    var percentage = 0;
+    
     function load(){
-        var speed = 1;
-        var percentage = 0;
-        setTimeout(function(){
-            while( percentage <= 1000 ){
-                updateUI( percentage / 10 );
-                percentage += speed; 
-            }
-        }, 1000);
-        percentage = 100;
-        updateUI( percentage / 10 );
-        setTimeout(function(){
-            loader.style.opacity = 0;
-        }, 2000);
+        percentage ++;
+        updateUI( percentage );
+        if( percentage < 100 ) setTimeout( load, 10);
+        else setTimeout( clear , 500);
+    }
+    function clear(){
+        loader.style.opacity = "0";   
     }
     
     function updateUI( percentage ){
         counter.innerHTML = Math.floor( percentage ) + "%";
-        progressBarHolder.style.width = percentage + "%";
+        progressBarHolder.style.width = Math.floor( percentage ) + "%";
     }
     window.addEventListener("load", load, false);
 })();
