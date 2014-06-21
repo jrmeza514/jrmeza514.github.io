@@ -11,6 +11,9 @@ a:active, a, a:visited, a:hover, *{
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent; /* For some Androids */
 }
+::selection{
+    background-color: rgba(255, 48, 48, 0.91);   
+}
 .page_wrapper{
 	position:relative;
 	height: 100%;
@@ -65,4 +68,27 @@ section{
 }
 section:nth-child(odd){
     background-color: rgb(246, 246, 246);
+}
+section .header{
+    position: relative;
+    height: 100px;
+    text-align: center;
+}
+section .header .title{
+    display: inline-block;
+    padding: 20px;
+    font-size: 2em;
+    //background-color: #e74c3c;
+    //color: white;
+    font-family: Raleway;
+    font-weight: 900;
+}
+section .header .icon{
+    height: 70px;
+    width: 70px;
+    display: inline-block;
+}
+section .header .icon img{
+    max-height: 100%;
+    max-width: 100%;
 }
