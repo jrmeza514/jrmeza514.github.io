@@ -4,3 +4,9 @@ input:required{
 textarea:invalid {
     background-color: white;
 }
+.mail_form_wrapper .contact-form input[type="submit"]{
+    background-color: rgba(255, 48, 48, 0.91);   
+}
+.contact-form{
+ overflow-x: hidden;   
+}
