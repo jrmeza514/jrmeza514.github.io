@@ -3,7 +3,7 @@
 <!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
 <!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="">
+<html>
 <!--<![endif]-->
 <head> 
 <title>Juan Meza | Personal Website</title>
@@ -11,7 +11,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <title>Untitled Document</title>
-<link href="boilerplate.css" rel="stylesheet" type="text/css">
+
 <link href="css/main.css" rel="stylesheet" type="text/css">
 <link href="css/home-section.css" rel="stylesheet" type="text/css">
 <link href="css/donate.css" rel="stylesheet" type="text/css">
@@ -23,10 +23,12 @@
 <link rel="stylesheet" href="res/css/normalize.css">
 <link rel="stylesheet" href="res/css/stroll.css">
 <link href='http://fonts.googleapis.com/css?family=Ruthie' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="res/js/logo_animation.js"></script>
+<!--<script type="text/javascript" src="res/js/logo_animation.js"></script>-->
 <link rel="stylesheet" href="http://jrmeza514.github.io/res/Fonts/Avenir/Avenir.css">
 <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="http://jrmeza514.github.io/theFrenzys/design/original/css/contact.css">
+<link rel="stylesheet" href="css/contact.css">
 <!--  
 To learn more about the conditional comments around the html tags at the top of the file:
 paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
@@ -40,7 +42,6 @@ Do the following if you're using your customized build of modernizr (http://www.
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<script src="respond.min.js"></script>
 </head>
 <body>
 <!--<script src="http://jrmeza514.github.io/res/website_preloader/preloader.js" type="text/javascript"></script>-->
@@ -117,6 +118,19 @@ Do the following if you're using your customized build of modernizr (http://www.
                 <img src="img/icon/contact.png"> 
             </div>
         </div>
+        <div class="mail_form_wrapper">
+            <form action="" method="post" class="contact-form">
+                <div class="inputs">
+                    <input type="text" name="name" placeholder="Name" required/>
+                    <input type="email" name="email" placeholder="Email" required/>
+                    <input type="tel" placeholder="Phone" name="tel"/>
+                </div>
+                <div class="message">
+                    <textarea placeholder="Enter Message Here!"></textarea>
+                </div>
+                <input type="submit" value=""/>
+            </form>
+        </div>
     </section>
     <section id="donate" class="donate-section">
         <div class="header">
@@ -137,7 +151,7 @@ Do the following if you're using your customized build of modernizr (http://www.
 </form>
     </section>
     <section class="footer">
-        
+        Copyright Juan Meza 2014
     </section>
  
 </div>

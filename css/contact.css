@@ -1,0 +1,6 @@
+input:required{
+    background-color: white;
+}
+textarea:invalid {
+    background-color: white;
+}
