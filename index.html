@@ -56,6 +56,7 @@ Do the following if you're using your customized build of modernizr (http://www.
                 <div class="nav-item">Portfolio</div>
                 <div class="nav-item">Gallery</div>
                 <div class="nav-item">Contact</div>
+                <div class="nav-item">Resume</div>
             </nav>
             <div class="nav-toggle" onclick="toggleNavigation()" ></div>
         </div>
@@ -64,9 +65,9 @@ Do the following if you're using your customized build of modernizr (http://www.
     <section class="home-section">
     	 
         <div id="anim_bg">
-        	 <div class="logo_animation">
-                 Juan Meza
-             </div>
+            <div class="logo">
+                JUAN MEZA <br/> DEVELOPER
+            </div>
         </div>
         <script>
             var startColor = [ 0 , 0 , 0 ];
@@ -79,7 +80,7 @@ Do the following if you're using your customized build of modernizr (http://www.
             startColor = randomColor();
             var bg = document.getElementById("anim_bg");
             function refresh(){
-                bg.style.backgroundColor = "rgb(" + startColor.r + "," + 
+                bg.style.color = "rgb(" + startColor.r + "," + 
                 startColor.g + ","+ startColor.b + ")";   
             }
             setInterval(function(){
