@@ -86,6 +86,10 @@ section{
 section:nth-child(odd){
     background-color: rgb(246, 246, 246);
 }
+section.home-section{
+    margin: 0;
+    padding: 0;
+}
 section .header{
     position: relative;
     height: 100px;
@@ -218,5 +222,40 @@ section .body .projects .project .description{
         background: #2d2d2d;
         cursor: pointer;
         border-radius: 5px;
+    }
+    .hiddenheader .nav-toggle .bar-box{
+        height: 80%;
+        width: 80%;
+        margin: 10% auto;
+        box-sizing: border-box;
+        padding: 10%;
+        position: relative;
+    }
+    .hiddenheader .nav-toggle .bar-box .bar{
+        height:15%;
+        width: 90%;
+        margin: 14% auto;
+        vertical-align: center;
+        background-color: white;
+        border-radius: 5px;
+        transition: all 0.5s;
+    }
+    #NAV_MENU.visible + .nav-toggle .bar:nth-child(1){
+      opacity: 0;
+        width: 0;
+    }
+    #NAV_MENU.visible + .nav-toggle .bar:nth-child(2){
+        position: absolute;
+        transform: rotate( 45deg );
+        width: 80%;
+        left: 10%;
+        top: 30%;
+    }
+    #NAV_MENU.visible + .nav-toggle .bar:nth-child(3){
+         transform: rotate( -45deg );
+        position: absolute;
+        left: 10%;
+        top: 30%;
+        width: 80%;
     }
 }
