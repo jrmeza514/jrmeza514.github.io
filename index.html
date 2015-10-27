@@ -1,216 +1,97 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
-<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
-<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
-<!--[if gt IE 8]><!-->
+<!DOCTYPE html>
 <html>
-<!--<![endif]-->
-<head> 
-<title>Juan Meza | Personal Website</title>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<title>Untitled Document</title>
+    <head>
+    	<link rel="stylesheet" type="text/css" href="css/main.css">
+    	<meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+    	<section class="banner section">
+    		<div class="inner-banner">
+    			<div class="avatar-wrapper">
+	    		</div>
+	    		<div class="banner-info">
+	    			<div class="name">
+	    				Juan Meza
+	    			</div>
+		    		<div class="position">
+		    			Frontend Developer
+		    		</div>
+	    		</div>
+    		</div>
+    	</section>
+    	<section id="about" class="section">
 
-<link href="css/main.css" rel="stylesheet" type="text/css">
-<link href="css/home-section.css" rel="stylesheet" type="text/css">
-<link href="css/donate.css" rel="stylesheet" type="text/css">
-<link href="css/about.css" rel="stylesheet" type="text/css">
-<link href="css/projects.css" rel="stylesheet" type="text/css">
-<link href="css/header.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="res/js/scroll.js"></script>
-<script type="text/javascript" src="res/js/stroll.min.js"></script>
-<link rel="stylesheet" href="res/css/normalize.css">
-<link rel="stylesheet" href="res/css/stroll.css">
-<link href='http://fonts.googleapis.com/css?family=Ruthie' rel='stylesheet' type='text/css'>
-<!--<script type="text/javascript" src="res/js/logo_animation.js"></script>-->
-<link rel="stylesheet" href="http://jrmeza514.github.io/res/Fonts/Avenir/Avenir.css">
-<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="css/footer.css">
-<link rel="stylesheet" href="css/contact.css">
-
-<script src="js/nav.js" type="text/javascript"></script>
-
-<!--  
-To learn more about the conditional comments around the html tags at the top of the file:
-paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
-
-Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
-* insert the link to your js here
-* remove the link below to the html5shiv
-* add the "no-js" class to the html tags at the top
-* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
--->
-<!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-</head>
-<body>
-<script src="http://jrmeza514.github.io/res/website_preloader/preloader.js" type="text/javascript"></script>
-<div class="page_wrapper">
- 	<div class="hiddenheader hiddenmobile">
-    	<div class="content">
-            <div class="logo">Juan Meza</div>
-            <nav class="nav" id="NAV_MENU">
-                <div class="nav-item">About</div>
-                <div class="nav-item">Portfolio</div>
-                <div class="nav-item">Gallery</div>
-                <div class="nav-item">Contact</div>
-                <div class="nav-item">Resume</div>
-            </nav>
-            <div class="nav-toggle" onclick="toggleNavigation()" >
-                <div class="bar-box">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-    <section class="home-section">
-    	 
-        <div id="anim_bg">
-            <div class="logo">
-                JUAN MEZA <br/> DEVELOPER
-            </div>
-        </div>
-        <script>
-            var startColor = [ 0 , 0 , 0 ];
-             function randomColor(){
-                var r = Math.floor(Math.random() * (255 - 100 + 1)) + 100;
-                var g = Math.floor(Math.random() * (255 - 100 + 1)) + 100;
-                var b = Math.floor(Math.random() * (255 - 100 + 1)) + 100;
-                return { r : r ,  g : g , b : b };
-             }
-            startColor = randomColor();
-            var bg = document.getElementById("anim_bg");
-            function refresh(){
-                bg.style.color = "rgb(" + startColor.r + "," + 
-                startColor.g + ","+ startColor.b + ")";   
-            }
-            setInterval(function(){
-                startColor = randomColor();
-                refresh();
-            }, 1000);
-            
-        </script>
-    </section>
-    <section class="about-section">
-        <div class="header">
-            <div class="title">
-                About
-            </div>
-            <div class="icon">
-                <img src="img/icon/about.png"> 
-            </div>
-        </div>
-        <div class="body">
-            <div class="content">
-                <p>
-                    Hi, my name is Juan. I am a 
-                    <span class="highlight">software</span>
-                    developer based in San Jose, CA.
-                    My Skills include 
-                    <span class="highlight">web</span>
-                    development, 
-                    <span class="highlight">mobile </span>
-                    development and a great 
-                    passion for technology.
-                </p>
-            </div>
-            <skills>
-                <div class="title">Skills</div>
-                <skill>HTML5</skill>
-                <skill>CSS3</skill>
-                <skill>JAVASCIPT</skill>
-                <skill>PHP</skill>
-                <skill>SQL</skill>
-                <skill>AJAX</skill>
-                <skill>ANDROID</skill>
-                <skill>GOOGLE API</skill>
-            </skills>
-        </div>
-    </section>
-    <section class="projects-section">
-        <div class="header">
-            <div class="title">
-                Projects
-            </div>
-            <div class="icon">
-                <img src="img/icon/projects.png"> 
-            </div>
-        </div>
-        <div class="body">
-<!--
-            <div class="content">
-                <p class="not-available">
-                   No projects availble at this moment.
-                </p>
-            </div>
--->
-            <div class="projects">
-                <div class="project">
-                    <div class="title">
-                        Project Sunshine
-                    </div>
-                    <div class="description">
-                        <p>This is a Weather forecasting application. It utilizes the 
-                        Open Weathermap api to get recent weather data and display 
-                        it in a native android application. It is a project from the 
-                        Android Nano degree program at Udacity. </p>
-                    </div>
-                </div>
-                <div class="project">
-                    <div class="title">
-                        Movie Detective
-                    </div>
-                    <div class="description">
-                        <p>This project allows the user to navigate through popular movies
-                        and learn more about them before they decide to go watch it. It
-                        uses Internet media database to get relevant data and make it
-                        available to users in a native android application.`</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="gallery-section">
-        <div class="header">
-            <div class="title">
-                Gallery
-            </div>
-            <div class="icon">
-                <img src="img/icon/gallery.jpg"> 
-            </div>
-        </div>
-    </section>
-    <section class="contact-section">
-        <div class="header">
-            <div class="title">
-                Contact
-            </div>
-            <div class="icon">
-                <img src="img/icon/contact.png"> 
-            </div>
-        </div>
-        <div class="mail_form_wrapper">
-                <form class="contact-form">
-                    <div class="head">
-                        <div class="title">Contact Me Now!</div>
-                    </div>
-                    <div class="inputs">
-                        <input type="text" placeholder="name" name="contact-name" required>
-                        <input type="tel" placeholder="phone" name="contact-tel" required>
-                        <input type="email" placeholder="email" name="contact-email" required>
-                    </div>
-                    <div class="message">
-                        <textarea name="contact-message" placeholder="Enter Your Message Here!"></textarea>
-                    </div>
-                    <input type="submit" value="">
-                </form>
-            </div>
-    </section>
-</div>
-</body>
+    		<div class="intro-skill-wrapper">
+    			<div class="intro">
+	    			<div class="section-title">About Me</div>
+	    			<p>
+	    				My name is Juan Meza. I am a frontend developer, based in San Jose, who is
+	    				always looking to create new exciting projects. I have four years of experience
+	    				learning the core technologies of the web. I started learning my Junior year
+	    				in highschool and have pushed on sunce. My dream is to join a company and work
+	    				on world-changing projects with cutting edge technologies.
+	    			</p>
+	    		</div>
+	    		<div class="skills">
+	    			<div class="skill-title">Skills</div>
+	    			<div data-bind="foreach: skills" class="skill-list">
+	    				<div class="skill" data-bind="text: $data"></div>
+	    			</div>
+	    		</div>
+    		</div>
+    	</section>
+    	<section id="education" class="section">
+    		<div class="inner-edu">
+	    		<div class="edu-title">Education</div>
+	    		<div class="certificationList" data-bind="foreach: education">
+	    			<div class="edu-entry">
+	    				<div class="school" data-bind="text: school"></div>
+	    				<div class="year" data-bind="text: year"></div>
+	    				<div class="degree" data-bind="text: degree"></div>
+	    				<div class="desc">
+	    					<p data-bind="text: desc"></p>
+	    				</div>
+	    				<div class="links" data-bind="foreach: links">
+	    					<div class="link">
+	    						<a data-bind="attr: { href : url}">
+	    							<div class="thubnail-container">
+	    								<span class="title" data-bind="text: name"></span>
+	    								<img class="thumbnail" data-bind="attr: {src: thumbnail}">
+	    							</div>
+	    						</a>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+    		</div>
+    	</section>
+    	<section id="projects" class="section">
+    		<div class="projects">
+	    			<div class="projects-title">Projects</div>
+	    			<div data-bind="foreach: projects" class="projects-list">
+	    				<a data-bind="attr: { href : url }">
+		    				<div class="project">
+		    					<div class="title" data-bind="text: name"></div>
+		    					<div class="image">
+		    						<img data-bind="attr: { src : img }">
+		    					</div>
+		    				</div>
+	    				</a>
+	    			</div>
+	    		</div>
+    	</section>
+    	<section id="contact" class="section">
+    		<div class="contact-list">
+	    		<div class="contact-title">Contact</div>
+	    		<div class="contact-item">Email: <a href="mailto:jrmeza514@gmail.com">jrmeza514@gmail.com</a></div>
+	    		<div class="contact-item"> Phone: <a href="tel:669-253-9544">(669) 253-9544</a></div>
+    		</div>
+    	</section>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.3.0.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/skills.js"></script>
+    <script src="js/ed.js"></script>
 </html>

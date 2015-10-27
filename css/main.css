@@ -1,261 +1,226 @@
-body, html{
-	overflow:hidden;
-	position:relative;
-	height:100%;
+body , html{
+	margin: 0;
+	font-family: Arial;
+	color: #2c3e50;
+}
+a{
+	color: inherit;
+	text-decoration: none;
+}
+.section{
+	padding: 2em 1em;
+}
+.section:nth-child(even){
+	background-color: #2c3e50;
+	color: white;
+}
+.banner{
+	display: block;
+	height: 10em;
+	padding: 1em 2em;
+}
+.inner-banner{
+	position: relative;
+	max-width: 1000px;
+	height: auto;
+	margin: auto;
+}
+.banner-info{
+	display: inline-block;
+	float: right;
+}
+.name{
+	font-size: 4em;
+}
+.position{
+	font-size: 2em;
+}
+.avatar-wrapper{
+	width: 8em;
+	height: 8em;
+	border-radius: 100%;
+	overflow: hidden;;
+	background-image: url(../img/avatar.jpg);
+	background-size: 120%;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: inline-block;
+	float: left;
+	margin-left: 4em;
+}
+.section-title{
+	font-size: 2em;
+	text-align: center;
+}
+.intro-skill-wrapper{
 	width: 100%;
-	-webkit-font-smoothing: antialiased;
+	max-width: 1000px;
+	margin: auto;
 }
-a:active, a, a:visited, a:hover{
-    background: inherit;
-    color: inherit;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-tap-highlight-color: transparent; /* For some Androids */
+.intro{
+	margin: auto;
+	font-size: 1.1em;
+	line-height: 1.5em;
 }
-*{
-     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-tap-highlight-color: transparent; /* For some Androids */
+.skills{
+	margin: auto;
+	font-weight: bold;
 }
-::selection{
-    background-color: rgba(255, 48, 48, 0.91);   
+.skill-title{
+	margin-left: 5px;
+	font-size: 1.3em;
 }
-.page_wrapper{
-	position:relative;
-	height: 100%;
-	width:100%;	
-	overflow-y: scroll;
+.skill{
+	background-color: rgba(255, 48, 48, 0.91);
+	display: inline-block;
+	padding: 1em;
+	margin: 5px;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+	transition: transform 0.5s;
+	-webkit-backface-visibility: initial;
+   	backface-visibility: initial;
 }
-#anim_bg{
-	background-color: #4d4d4d;
+.projects{
 	width: 100%;
-	height: 100%;	
-    transition: all 1s;
-    padding: 5em 0em;
+	margin: auto;
+	max-width: 1500px;
 }
-#anim_bg .logo{
-    font-size: 3em;
-    //color: white;
-    text-align: center;
-    width: 80%;
-    margin: auto;
-    font-weight: bold;
-    
+.projects-title{
+	font-size: 2em;
+	text-align: center;
+	font-weight: bold;
+	padding-bottom: 0.5em;
 }
-.hiddenheader{
-    background-color: white;
-    border-bottom: 1px solid #e9e9e9;
-    font-family: Raleway, Arial, Arvo, Avenir;
-    color: #2d2d2d;
-   box-shadow:  0px 4px 15px rgba(0,0,0,0.07);
-/*
-    position: absolute;
-    top: 0%;
-    width: 100%;
-*/
+.project{
+	display: inline-block;
+	margin: 5px;
+	width: calc( ( 50% - 20px ) );
+	background-color: rgba(255, 48, 48, 0.91);;
+	padding: 1em;
+	box-sizing: border-box;
+	border-radius: 3px;
+	color: white;
+	vertical-align: top;
 }
-.hiddenheader .logo{
-    display: inline-block;
-    padding: 15px;
-    font-size: 1.2em;
+.inner-edu{
+	max-width: 1000px;
+	margin: auto;
 }
-.hiddenheader .nav{
-    display: inline-block;
-    height: 100%;
-    font-size: 1.2em;
-    float: right;
-    transition: height 0s ease;   
+.edu-title{
+	font-size: 2em;
+	text-align: center;
+	font-weight: bold;
 }
-.hiddenheader .nav .nav-item{
-    display: inline-block;
-    padding: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.edu-entry{
+	padding: 1em;
 }
-.hiddenheader .nav .nav-item:hover{
-    background-color: #e9e9e9;
+.school{
+	font-size: 1.5em;
+	float: left;
 }
-.hiddenheader .content{
-    max-width: 1200px;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
+.year{
+	font-size: 0.8em;
+	float: right;
+}
+.degree{
+	clear: both;
+	font-size: 1.2em;
+}
+.project .title{
+	text-align: center;
+	padding-bottom: 0.5em;
+}
+.image{
+	position: relative;
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
 
 }
-section{
-    padding: 30px 0;   
+.desc{
+	max-width: 500px;
 }
-section:nth-child(odd){
-    background-color: rgb(246, 246, 246);
+.image img{
+	max-width: 100%;
 }
-section.home-section{
-    margin: 0;
-    padding: 0;
+.link{
+	width: 100px;
+	height: 80px;
+	overflow: hidden;
+	display: inline-block;
+	background-color: rgba(255, 48, 48, 0.91);
+	padding: 5px;
 }
-section .header{
-    position: relative;
-    height: 100px;
-    text-align: center;
-    vertical-align: text-bottom;
+.link .title{
+	color: white;
+	font-size: 0.5em;
 }
-section .header .title{
-    display: inline-block;
-    padding: 20px;
-    font-size: 2em;
-    font-family: Raleway;
-    font-weight: 900;
-    vertical-align: top;
-    margin-top: 0.3em;
+.thumbnail{
+	width: 100%;
+	height: 60px;
 }
-section .header .icon{
-    height: 60px;
-    width: 60px;
-    display: inline-block;
-    margin-top: 20px;
-    vertical-align: top;
+.contact-title{
+	font-size: 2em;
+	text-align: center;
+	font-weight: bold;
 }
+.contact-item{
+	font-size: 1.3em;
+	padding: 0.5em;
+}
+.contact-item a{
+	color:  rgba(255, 48, 48, 0.91);
+	font-weight: bold;
+}
+.contact-list{
+	max-width: 600px;
+	margin: auto;
+	text-align: center;
+}
+@media screen and (min-width: 1000px){
+	.skills , .intro{
+		display: inline-block;
+		vertical-align: top;
+	}
+	.skills{
+		width: calc( 55% - 50px);
+	}
+	.intro{
+		margin-right: 48px;
+		width: calc( 45% - 50px );
+	}
+	.project{
+		width: calc( ( 100% / 3 ) - 20px );
+	}
+}
+@media screen and (min-width: 1500px) and (min-width: 1001px){
+	.project{
+		width: calc( ( 100% / 4 ) - 20px );
+	}
+	.avatar-wrapper , .banner-info{
+		margin: 0 4em;
+	}
+}
+@media screen and (max-width: 600px){
+	.avatar-wrapper , .banner-info{
+		float: none;
+		margin: auto;
+		display: block;
+		text-align: center;
+	}
 
-section .header .icon img{
-    height: 100%;
-    width: 100%;
-}
-section .body{
-    padding: 2em; 
-    display: block;
-}
-section .body .content{
-    display: block;
-    width: 90%;
-    padding: 1em;
-    background-color: rgba(255, 48, 48, 0.91);
-    color: floralwhite;
-    margin: auto;
-}
-section .body .content p{
-    font-size: 1.5em;
-    font-family: arial;
-    font-weight: normal;
-}
-section .body .content p span.highlight{
-    color:#4d4d4d;;
-    font-weight: bold;
-}
-section .body .content p.not-available{
-    text-align: center;   
-}
-section .body skills{
-    display: block;
-    width: 90%;
-    margin: auto;
-    padding: 1em;
-    margin-top: 10px;
-    background-color: white;
-}
-section .body skills .title{
-    color: rgba(255, 48, 48, 0.91);
-    font-size: 1.5em;
-    font-weight: bold;
-    font-family: arial;
-}
-section .body skills skill{
-    display: inline-block;
-    padding: 1em;
-    background-color: rgba(255, 48, 48, 0.91);
-    color: floralwhite;
-    font-weight: bold;
-    border-radius: 5px;
-    margin: 5px;
-    cursor: pointer;
-}
-section .body .projects{
-    width: 90%;
-    padding: 1em;
-    margin: auto;
-    background-color: rgba(255, 48, 48, 0.91);
-    color: floralwhite;
-    font-family: arial;
-    overflow-x: hidden;
-}
-section .body .projects .project{
-    display: inline;
-    margin: 5px;
-}
-section .body .projects .project .title{
-    text-align: center;
-    padding: 0.5em;
-    font-size: 1.8em;
-    color: #4d4d4d;
-    font-weight: bold;
-}
-section .body .projects .project .description{
-    font-size: 1.3em;   
-}
-@media screen and (max-width: 640px){
-    .hiddenheader .nav{
-        height: 0;
-        position: absolute;
-        display: block;
-        right: 50px;
-        top: 5px;
-        background-color: #e9e9e9;
-        z-index: 100000000000000000;
-        overflow: hidden;
-        transition: height 0.15s;
-          
-    }
-    .hiddenheader .nav.visible{
-        height: 247px;
-    }
-    .hiddenheader .nav .nav-item{
-      display: block;
-        padding: 20px;
-        margin: 0;
-    }
-    .hiddenheader .nav .nav-item:hover{
-        background-color: #fff;
-    }
-    .hiddenheader .nav-toggle{
-        width: 40px;
-        height: 40px;
-        margin: 5px;
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        background: #2d2d2d;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-    .hiddenheader .nav-toggle .bar-box{
-        height: 80%;
-        width: 80%;
-        margin: 10% auto;
-        box-sizing: border-box;
-        padding: 10%;
-        position: relative;
-    }
-    .hiddenheader .nav-toggle .bar-box .bar{
-        height:15%;
-        width: 90%;
-        margin: 14% auto;
-        vertical-align: center;
-        background-color: white;
-        border-radius: 5px;
-        transition: all 0.25s;
-    }
-    #NAV_MENU.visible + .nav-toggle .bar:nth-child(1){
-      opacity: 0;
-        width: 0;
-    }
-    #NAV_MENU.visible + .nav-toggle .bar:nth-child(2){
-        position: absolute;
-        transform: rotate( 45deg );
-        width: 80%;
-        left: 10%;
-        top: 30%;
-    }
-    #NAV_MENU.visible + .nav-toggle .bar:nth-child(3){
-         transform: rotate( -45deg );
-        position: absolute;
-        left: 10%;
-        top: 30%;
-        width: 80%;
-    }
+	.banner{
+		height: auto;
+	}
+	.name{
+		font-size: 3em;
+	}
+	.position{
+		font-size: 1.5em;
+	}
+	.project{
+		width: 100%;
+	}
 }
