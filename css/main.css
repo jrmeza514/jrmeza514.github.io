@@ -1,18 +1,93 @@
 body , html{
 	margin: 0;
 	font-family: Arial;
-	color: #2c3e50;
+	color: #0B2545;
+}
+*{
+
 }
 a{
 	color: inherit;
 	text-decoration: none;
 }
+header.section{
+	padding: 1em 1em 0.5em 1em;
+	display: flex;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;      /* TWEENER - IE 10 */
+  	display: -webkit-flex;     /* NEW - Chrome */
+	flex-flow: row;
+	justify-content: space-between;
+	font-size: 1.1em;
+}
+.logo{
+	display: flex;
+	cursor: pointer;
+}
+.logo-text{
+	padding: 0.5em 0;
+}
+nav{
+	display: inline-block;
+	padding: 0.5em;
+	display: flex;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;      /* TWEENER - IE 10 */
+  	display: -webkit-flex;     /* NEW - Chrome */
+	flex-flow: row;
+	justify-content: space-between;
+}
+#toggle{
+	display: none;
+	background-image: url("http://zpalexander.com/wp-content/themes/zach/images/hamburger-icon.png");
+	background-size: 80%;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 2px;
+}
+nav item{
+	cursor: pointer;
+	padding: 1px 1px;
+}
+header a{
+	padding: 0 8px 14px 8px;
+	color: white;
+	position: relative;
+}
+header a:focus:before, header a:hover:before {
+    left: 8px;
+    right: 8px;
+}
+header a:focus:before{
+	background: rgba(255, 48, 48, 0.91);
+}
+header a:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 5px;
+    height: 2px;
+    background: #fff;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: left, right;
+    -moz-transition-property: left, right;
+    -ms-transition-property: left, right;
+    -o-transition-property: left, right;
+    transition-property: left, right
+}
 .section{
 	padding: 2em 1em;
 }
-.section:nth-child(even){
-	background-color: #2c3e50;
-	color: white;
+.section:nth-child(odd){
+	background-color: #0B2545;
+	color: #EEF4ED;
 }
 .banner{
 	display: block;
@@ -36,17 +111,15 @@ a{
 	font-size: 2em;
 }
 .avatar-wrapper{
-	width: 8em;
-	height: 8em;
+	width: 2em;
+	height: 2em;
 	border-radius: 100%;
 	overflow: hidden;;
-	background-image: url(../img/avatar.jpg);
+	background-image: url("http://www.icon100.com/up/2761/128/Senza-titolo-1_28.png");
 	background-size: 120%;
 	background-position: center;
 	background-repeat: no-repeat;
 	display: inline-block;
-	float: left;
-	margin-left: 4em;
 }
 .section-title{
 	font-size: 2em;
@@ -76,7 +149,7 @@ a{
 	padding: 1em;
 	margin: 5px;
 	border-radius: 5px;
-	color: white;
+	color: #EEF4ED;
 	cursor: pointer;
 	transition: transform 0.5s;
 	-webkit-backface-visibility: initial;
@@ -101,7 +174,7 @@ a{
 	padding: 1em;
 	box-sizing: border-box;
 	border-radius: 3px;
-	color: white;
+	color: #EEF4ED;
 	vertical-align: top;
 }
 .inner-edu{
@@ -116,7 +189,7 @@ a{
 .edu-entry{
 	padding: 1em;
 }
-.school{
+.sch-deg{
 	font-size: 1.5em;
 	float: left;
 }
@@ -125,8 +198,11 @@ a{
 	float: right;
 }
 .degree{
-	clear: both;
 	font-size: 1.2em;
+}
+.desc-links{
+	display: block;
+	clear: both;
 }
 .project .title{
 	text-align: center;
@@ -141,9 +217,15 @@ a{
 }
 .desc{
 	max-width: 500px;
+	display: inline-block;
 }
 .image img{
 	max-width: 100%;
+}
+.links{
+	margin-top: 1em;
+	float: right;
+	display: inline-block;
 }
 .link{
 	width: 100px;
@@ -154,7 +236,7 @@ a{
 	padding: 5px;
 }
 .link .title{
-	color: white;
+	color: #EEF4ED;
 	font-size: 0.5em;
 }
 .thumbnail{
@@ -168,7 +250,7 @@ a{
 .resume-button{
 	display: inline;
 	background-color: rgba(255, 48, 48, 0.91);
-	color: white;
+	color: #EEF4ED;
 	padding: 1em;
 	border-radius: 5px;
 	left: auto;
@@ -213,14 +295,41 @@ a{
 	.project{
 		width: calc( ( 100% / 4 ) - 20px );
 	}
-	.avatar-wrapper , .banner-info{
-		margin: 0 4em;
-	}
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
+	nav{
+		flex-flow: column;
+		position: absolute;
+		right: 1em;
+		top: 4.3em;
+		z-index: 10;
+		background-color: red;
+		transition: height 0.5s;
+		height: 0;
+		padding: 0;
+		overflow: hidden;
+	}
+	#toggle{
+		display: flex;
+		position: absolute;
+		top: 1em;
+		right: 1em;
+		padding: 1em;
+		background-color: red;
+		cursor: pointer;
+	}
+	header a:focus:before{
+		background: #0B2545;
+	}
+	nav item{
+		margin-bottom: 0.5em;
+		padding: 0.75em 0.5em 0.5em 0.5em;
+	}
+	nav.toggled{
+		height: 12em;
+	}
 	.avatar-wrapper , .banner-info{
 		float: none;
-		margin: auto;
 		display: block;
 		text-align: center;
 	}
@@ -236,5 +345,18 @@ a{
 	}
 	.project{
 		width: 100%;
+	}
+	.sch-deg{
+		display: block;
+		float: none;
+	}
+	.year{
+		display: block;
+		float: none;
+	}
+	.links{
+		float: none;
+		display: block;
+		margin: auto;
 	}
 }
