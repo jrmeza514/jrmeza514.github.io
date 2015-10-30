@@ -1,115 +1,120 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    	<link rel="stylesheet" type="text/css" href="css/main.css">
-    	<meta name="viewport" content="width=device-width">
-    </head>
-    <body>
-    	<header class="section">
-    		<a href="#">
-	    		<div class="logo">
-	    			<div class="avatar-wrapper"></div>
-	    			<!-- <div class="logo-text">UAN MEZA</div> -->
-	    		</div>
-    		</a>
-    		<div id="toggle"></div>
-    		<nav>
-    			<item><a href='#about'>ABOUT</a></item>
-    			<item><a href="#education">EDU</a></item>
-    			<item><a href="#projects">PORTFOLIO</a></item>
-    			<item><a href="#contact">CONTACT</a></item>
-    		</nav>
-    	</header>
-    	<section class="banner section">
-    		<div class="inner-banner">
-
-	    		<div class="banner-info">
-	    			<div class="name">
-	    				Juan Meza
-	    			</div>
-		    		<div class="position">
-		    			Frontend Developer
-		    		</div>
-	    		</div>
-    		</div>
-    	</section>
-    	<section id="about" class="section">
-
-    		<div class="intro-skill-wrapper">
-    			<div class="intro">
-	    			<div class="section-title"> ABOUT</div>
-	    			<p>
-	    				Creating awesome, responsive and tested front-end web applications.
-	    			</p>
-	    		</div>
-	    		<div class="skills">
-	    			<div class="skill-title">SKILLS</div>
-	    			<div data-bind="foreach: skills" class="skill-list">
-	    				<div class="skill" data-bind="text: $data"></div>
-	    			</div>
-	    		</div>
-    		</div>
-    	</section>
-    	<section id="education" class="section">
-    		<div class="inner-edu">
-	    		<div class="edu-title">EDUCATION</div>
-	    		<div class="certificationList" data-bind="foreach: education">
-	    			<div class="edu-entry">
-		    			<div class="sch-deg">
-		    				<div class="school" data-bind="text: school"></div>
-		    				<div class="degree" data-bind="text: degree"></div>
-		    			</div>
-	    				<div class="year" data-bind="text: year"></div>
-	    				<div class="desc-links">
-	    					<div class="desc">
-		    					<p data-bind="text: desc"></p>
-		    				</div>
-		    				<div class="links" data-bind="foreach: links">
-		    					<div class="link">
-		    						<a data-bind="attr: { href : url}">
-		    							<div class="thubnail-container">
-		    								<span class="title" data-bind="text: name"></span>
-		    								<img class="thumbnail" data-bind="attr: {src: thumbnail}">
-		    							</div>
-		    						</a>
-		    					</div>
-		    				</div>
-	    				</div>
-	    			</div>
-	    		</div>
-    		</div>
-    	</section>
-    	<section id="projects" class="section">
-    		<div class="projects">
-	    			<div class="projects-title">PORTFOLIO</div>
-	    			<div data-bind="foreach: projects" class="projects-list">
-	    				<a data-bind="attr: { href : url }">
-		    				<div class="project">
-		    					<div class="title" data-bind="text: name"></div>
-		    					<div class="image">
-		    						<img data-bind="attr: { src : img }">
-		    					</div>
-		    				</div>
-	    				</a>
-	    			</div>
-	    		</div>
-    	</section>
-    	<section id="contact" class="section">
-    		<div class="contact-list">
-	    		<div class="contact-title">CONTACT</div>
-	    		<div class="contact-item">Email: <a href="mailto:jrmeza514@gmail.com">jrmeza514@gmail.com</a></div>
-	    		<div class="contact-item"> Phone: <a href="tel:669-253-9544">(669) 253-9544</a></div>
-    		</div>
-    		<div id="resume">
-    			<center><a href="pdf/resume/resume.pdf"><div class="resume-button">Resume</div></a></center>
-    		</div>
-    	</section>
-    </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.3.0.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/portfolio.js"></script>
-    <script src="js/skills.js"></script>
-    <script src="js/ed.js"></script>
-    <script src="js/scroll.js"></script>
+   <head>
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+      <meta name="viewport" content="width=device-width">
+   </head>
+   <body>
+      <header class="section">
+         <a href="#">
+            <div class="logo">
+               <div class="avatar-wrapper"></div>
+            </div>
+         </a>
+         <div id="toggle"></div>
+         <nav>
+            <item><a href='#about'>ABOUT</a></item>
+            <item><a href="#education">EDU</a></item>
+            <item><a href="#projects">PORTFOLIO</a></item>
+            <item><a href="#contact">CONTACT</a></item>
+         </nav>
+      </header>
+      <section class="banner section">
+         <div class="banner-info">
+            <div class="name">
+               Juan Meza
+            </div>
+            <div class="position">
+               Frontend Developer
+            </div>
+            <div class="headline">
+            	Creating awesome web applications with cutting edge technology.
+            </div>
+         </div>
+      </section>
+      <section id="about" class="section">
+         <div class="intro-skill-wrapper">
+            <div class="intro">
+               	<div class="section-title"> ABOUT</div>
+               	<p>
+                  I am a certified <span class="highlight">front-end developer </span>  based in San Jose, CA.
+                  I love creating interactive <span class="highlight">web applications</span> and learning new technologies. With more than 4
+                  years of experience polishing my skills, I would be thrilled to join a new team and change
+                  the world through <span class="highlight">great software</span>.
+               	</p>
+            </div>
+            <div class="skills">
+               <div class="skill-title">SKILLS</div>
+               <div data-bind="foreach: skills" class="skill-list">
+                  <div class="skill" data-bind="text: $data"></div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section id="education" class="section">
+         <div class="inner-edu">
+            <div class="edu-title">EDUCATION</div>
+            <div class="certificationList" data-bind="foreach: education">
+               <div class="edu-entry">
+                  <div class="sch-deg">
+                     <div class="school" data-bind="text: school"></div>
+                     <div class="degree" data-bind="text: degree"></div>
+                  </div>
+                  <div class="year" data-bind="text: year"></div>
+                  <div class="desc-links">
+                     <div class="desc">
+                        <p data-bind="text: desc"></p>
+                     </div>
+                     <div class="links" data-bind="foreach: links">
+                        <div class="link">
+                           <a data-bind="attr: { href : url}">
+                              <div class="thubnail-container">
+                                 <span class="title" data-bind="text: name"></span>
+                                 <img class="thumbnail" data-bind="attr: {src: thumbnail}">
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section id="projects" class="section">
+         <div class="projects">
+            <div class="projects-title">PORTFOLIO</div>
+            <div data-bind="foreach: projects" class="projects-list">
+               <a data-bind="attr: { href : url }">
+                  <div class="project">
+                     <div class="title" data-bind="text: name"></div>
+                     <div class="image">
+                        <img data-bind="attr: { src : img }">
+                     </div>
+                  </div>
+               </a>
+            </div>
+         </div>
+      </section>
+      <section id="contact" class="section">
+         <div class="contact-list">
+            <div class="contact-title">CONTACT</div>
+            <div class="contact-item">Email: <a href="mailto:jrmeza514@gmail.com">jrmeza514@gmail.com</a></div>
+            <div class="contact-item"> Phone: <a href="tel:669-253-9544">(669) 253-9544</a></div>
+         </div>
+         <div id="resume">
+            <center>
+               <a href="pdf/resume/resume.pdf">
+                  <div class="resume-button">Resume</div>
+               </a>
+            </center>
+         </div>
+      </section>
+   </body>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.3.0.js"></script>
+   <script src="js/main.js"></script>
+   <script src="js/portfolio.js"></script>
+   <script src="js/skills.js"></script>
+   <script src="js/ed.js"></script>
+   <script src="js/scroll.js"></script>
 </html>
