@@ -204,7 +204,7 @@ header a:before {
 .projects {
   width: 100%;
   margin: auto;
-  max-width: 1500px;
+  max-width: 1000px;
 }
 
 .projects-title {
@@ -371,12 +371,6 @@ header a:before {
   }
 }
 
-@media screen and (min-width: 1500px) and (min-width: 1001px) {
-  .project {
-    width: calc( ( 100% / 4 ) - 20px );
-  }
-}
-
 @media screen and (max-width: 800px) {
   nav {
     flex-flow: column;
@@ -430,10 +424,6 @@ header a:before {
     font-size: 1.4em;
   }
 
-  .project {
-    width: 100%;
-  }
-
   .sch-deg {
     display: block;
     float: none;
@@ -448,5 +438,11 @@ header a:before {
     float: none;
     display: block;
     margin: auto;
+  }
+}
+
+@media screen and (max-width: 550px){
+  .project {
+    width: 100%;
   }
 }
