@@ -111,6 +111,10 @@ header a:before {
   color: #EEF4ED;
 }
 
+.section:nth-child(even) {
+  background-color: #EEF4ED;
+}
+
 .inner-banner {
   position: relative;
   max-width: 1000px;
