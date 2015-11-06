@@ -84,14 +84,26 @@
          <div class="projects">
             <div class="projects-title">PORTFOLIO</div>
             <div data-bind="foreach: projects" class="projects-list">
-               <a data-bind="attr: { href : url }">
+               <!-- <a data-bind="attr: { href : url }"> -->
                   <div class="project">
                      <div class="title" data-bind="text: name"></div>
                      <div class="image">
                         <img data-bind="attr: { src : img }">
                      </div>
+                     <div class="hover-links">
+                        <div class="web-link">
+                          <a data-bind="attr: { href : url }">
+                            <img src="https://cnc.ucr.edu/ilearn/images/chrome.png" alt="Web" />
+                          </a>
+                        </div>
+                        <div class="web-link">
+                          <a data-bind="attr: { href : github }">
+                            <img src="http://uxrepo.com/static/icon-sets/elusive/svg/github.svg" alt="Github" />
+                          </a>
+                        </div>
+                     </div>
                   </div>
-               </a>
+               <!-- </a> -->
             </div>
          </div>
       </section>
