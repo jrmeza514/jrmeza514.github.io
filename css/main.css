@@ -232,6 +232,7 @@ header a:before {
   overflow-y: hidden;
 }
 .project .hover-links{
+  box-sizing: border-box;
   position: absolute;
   width: 100%;
   height: 100%;
