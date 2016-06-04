@@ -1,49 +1,79 @@
-let person = {
-	name: '${person.name}'
-};
+/********************************************************************************
+	ANIMATED TEXT CONTAINER LOGIC
+********************************************************************************/
+( () => {
+	/* Message String */
+	let message = `
+	function welcome ( person ) {
+		if( person.name !== 'Juan') {
+			console.log(\`Welcome \${person.name}\`);
+		} else {
+			console.log('You are the chosen Juan!');
+		}
+	}      .           .
+	`;
+	/* GET TEXT CONTAINER */
+	const message_container = document.querySelector('.txt-container');
 
-const MESSAGE = `
-function welcome ( person ) {
-	if( person.name !== 'Juan') {
-		console.log(\`Welcome ${person.name}\`);
-	} else {
-		console.log('You are the chosen Juan!');
+	/* STATE VARIABLES */
+	let currentMessage = "";
+	let message_array = message.split('');
+	let counter = 0;
+
+	/* Fucnction that renders the text into the text container */
+	function render( msg , counter)  {
+		if ( counter % 4 === 0 )
+			message_container.innerHTML = msg + '<span class="cursor">|</span>';
+		else
+			message_container.innerHTML = msg;
 	}
-}      .           .
-`
-const message_container = document.querySelector('.txt-container');
 
+	function nextCharacter () {
+		counter ++;
 
-let currentMessage = "";
-let MESSAGE_ARRAY = MESSAGE.split('');
-let counter = 0;
+		let chars = message_array.shift();
 
-setInterval(() => {
-	let chars = MESSAGE_ARRAY.shift();
-	if ( chars.charCodeAt(0) === 9 ){
-		chars = " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "
+		if ( chars.charCodeAt(0) === 9 ){
+			chars = " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "
+		}
+
+		if ( chars.charCodeAt(0) === 10 ){
+			chars = "<br />"
+		}
+
+		if ( message_array.length > 0 ) {
+			currentMessage += chars;
+		} else {
+			message_array = message.split('');
+			currentMessage = '';
+			counter = 0;
+		}
+
+		render( currentMessage , counter );
 	}
 
-	if ( chars.charCodeAt(0) === 10 ){
-		chars = "<br />"
-	}
+	setInterval( nextCharacter , 100 );
 
-	counter++;
-	if ( MESSAGE_ARRAY.length > 0 ) {
-		currentMessage += chars;
-	}
-	else {
-		MESSAGE_ARRAY = MESSAGE.split('');
-		currentMessage = '';
-		counter = 0;
-	}
-	render();
-}, 250);
+})();
 
-function render() {
+/********************************************************************************
+	ANIMATED TEXT CONTAINER LOGIC BLOCK
+********************************************************************************/
 
-	if ( counter % 4 === 0 )
-		message_container.innerHTML = currentMessage + '<span class="cursor">|</span>';
-	else
-		message_container.innerHTML = currentMessage;
-}
+
+
+/********************************************************************************
+	ANIMATED TEXT CONTAINER LOGIC BLOCK
+********************************************************************************/
+
+
+
+/********************************************************************************
+	ANIMATED TEXT CONTAINER LOGIC BLOCK
+********************************************************************************/
+
+
+
+/********************************************************************************
+	ANIMATED TEXT CONTAINER LOGIC BLOCK
+********************************************************************************/
