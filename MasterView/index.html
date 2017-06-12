@@ -77,6 +77,24 @@
 								searchText.toLowerCase().replace("#", "")
 							);
 							break;
+						case "6":
+							containsSearchText = equipment.alias.toLowerCase().replace("#", "").includes(
+								searchText.toLowerCase().replace("#", "")
+							);
+							containsSearchFilter = (() => {
+								if (equipment.status  != 1 || !containsSearchText ){
+									return false;
+								}
+								var d = new Date();
+								var h = d.getHours();
+								var m = d.getMinutes();
+								var s = d.getSeconds();
+								var n_ms = (h * 3600 + m * 60 + s) * 1000 ;
+								var last_midnight = (Date.now() - n_ms);
+								console.log(equipment.lastTransaction);
+								return equipment.lastTransaction.timestamp - last_midnight < 0;
+							})();
+							break;
 					}
 
 					if (containsSearchText && containsSearchFilter) {
@@ -163,6 +181,7 @@
           <option value="3">Available</option>
 					<option value="4">Unavailable</option>
 					<option value="5">Out For Repair</option>
+					<option value="6">Red Flagged</option>
         </select>
       </div>
 			</div>
