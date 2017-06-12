@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase-messaging.js"></script>
+		<link rel="stylesheet" href="./style.css">
+		<meta name="viewport" content="width=device-width">
+
+		<title>Master View</title>
+
+		<!-- Leave out Storage -->
+		<!-- <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase-storage.js"></script> -->
+
+		<script>
+			var config = {
+				apiKey: "AIzaSyAqdmqq7_jYYRaNp0OOPdpVOC0FKGU1T8w",
+				authDomain: "targetequipmentcontrol.firebaseapp.com",
+				databaseURL: "https://targetequipmentcontrol.firebaseio.com"
+			};
+			firebase.initializeApp(config);
+			var Equipment = [];
+			var database = firebase.database();
+			database.ref('Equipment/T-2605').on('value', (snapshot) => {
+				Equipment = [];
+				for (var key in snapshot.val()) {
+					if (snapshot.val().hasOwnProperty(key)) {
+						Equipment.push(snapshot.val()[key]);
+					}
+				}
+
+				updateListContainer();
+			});
+
+			function updateListContainer(){
+				var searchText = filterTextField.value;
+				var searchFilter = filterSelectMenu.value;
+
+				var containsSearchText = true;
+				var containsSearchFilter = true;
+
+				var listContainer = document.getElementById("listContainer");
+				listContainer.innerHTML = "";
+				for(var x = 0; x < Equipment.length; x++){
+					var equipment = Equipment[x];
+					/* Process Filters */
+					switch (searchFilter) {
+						case "1":
+							containsSearchText = equipment.alias.toLowerCase().replace("#", "").includes(
+								searchText.toLowerCase().replace("#", "")
+							);
+
+							break;
+						case "2":
+							containsSearchText = equipment.activeTM.toLowerCase().includes(
+								searchText.toLowerCase()
+							)
+							break;
+						case "3":
+							containsSearchFilter = equipment.status == 0;
+							containsSearchText = equipment.alias.toLowerCase().replace("#", "").includes(
+								searchText.toLowerCase().replace("#", "")
+							);
+							break;
+						case "4":
+							containsSearchFilter = equipment.status == 1;
+							containsSearchText = equipment.alias.toLowerCase().replace("#", "").includes(
+								searchText.toLowerCase().replace("#", "")
+							);
+							break;
+						case "5":
+							containsSearchFilter = equipment.status == 2;
+							containsSearchText = equipment.alias.toLowerCase().replace("#", "").includes(
+								searchText.toLowerCase().replace("#", "")
+							);
+							break;
+					}
+
+					if (containsSearchText && containsSearchFilter) {
+						var equipmentElement = generateEquipmentElement(equipment);
+						listContainer.appendChild(equipmentElement);
+					}
+				}
+			}
+
+			function generateEquipmentElement(equipment){
+				var equipmentElement = document.createElement('div');
+				equipmentElement.className = "equipment";
+				var titleDiv = document.createElement('div');
+				titleDiv.className = "title infoblock";
+				titleDiv.innerText = "Equipment Name: \r" + equipment.alias;
+				var statusDiv = document.createElement('div');
+				statusDiv.className = "status infoblock";
+				statusDiv.innerText = "Status: \r" + (function(){
+					switch (equipment.status) {
+						case 0:
+							return "Available";
+							break;
+						case 1:
+							return "Unavailable";
+							break;
+						case 2:
+							return "Out For Repair";
+							break;
+					}
+				})();
+				var lastKnownTMDiv = document.createElement('div');
+				lastKnownTMDiv.className = "last-known-tm infoblock";
+				lastKnownTMDiv.innerText = "Last Known Team Member: \r" + (equipment.lastTransaction.teamMember != undefined ? equipment.lastTransaction.teamMember : "");
+				var timestampDiv = document.createElement('div');
+				timestampDiv.className = "timestamp infoblock";
+				timestampDiv.innerText = "Last Interaction Time: \r" + (() => {
+					if(equipment.lastTransaction.timestamp == 0 ){
+						return "";
+					}
+					var date = new Date(equipment.lastTransaction.timestamp);
+					var timeSuffix = "AM";
+					var hour = date.getHours();
+					if (hour > 12) {
+						timeSuffix = "PM";
+						hour = hour - 12;
+					}
+					if (hour == 0) {
+						hour = 12;
+					}
+
+
+					var minutes = date.getMinutes() % 60;
+					if (minutes< 10) {
+						minutes = "0" + minutes;
+					}
+					return hour + ":" + minutes + timeSuffix + "  -  " +(date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear();
+				})();
+
+
+				equipmentElement.appendChild(titleDiv);
+				equipmentElement.appendChild(statusDiv);
+				equipmentElement.appendChild(lastKnownTMDiv);
+				equipmentElement.appendChild(timestampDiv);
+				return equipmentElement;
+			}
+		</script>
+	</head>
+	<body>
+		<div class="ui-wrapper">
+
+
+			<div class="filter-section">
+				<div class="group">
+		      <input type="text" required id="filterTextField">
+		      <span class="highlight"></span>
+		      <span class="bar"></span>
+		      <label>Search Filter</label>
+		    </div>
+				<div class="mdl-selectfield">
+        <label>Standard Select</label>
+        <select class="browser-default" id="filterSelectMenu">
+          <option value="1" selected> Equipment Name</option>
+          <option value="2">Team Member Name</option>
+          <option value="3">Available</option>
+					<option value="4">Unavailable</option>
+					<option value="5">Out For Repair</option>
+        </select>
+      </div>
+			</div>
+			<div class="list-container" id="listContainer">
+
+			</div>
+		</div>
+		<script>
+		var filterTextField = document.getElementById("filterTextField");
+		var filterSelectMenu = document.getElementById("filterSelectMenu");
+
+		filterTextField.addEventListener('keyup', (e) => {
+				updateListContainer();
+		}, false);
+		filterSelectMenu.addEventListener('change', (e) => {
+			updateListContainer();
+		}, false);
+
+		</script>
+	</body>
+</html>
