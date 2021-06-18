@@ -55,7 +55,7 @@ nav {
 
 #toggle {
   display: none;
-  background-image: url("http://zpalexander.com/wp-content/themes/zach/images/hamburger-icon.png");
+  background-image: url("../img/hamburger.png");
   background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
